@@ -60,6 +60,10 @@ Clone this repository to your desired folder:
 - cd my-folder
 - git clone https://github.com/batoorsohail/blog-app.git
 
+### Install
+- cd blog-app
+- bundle install
+
 ### Usage <a name="usage"></a>
 
 run `rails s` 
