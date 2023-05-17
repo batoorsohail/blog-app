@@ -19,7 +19,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖TBlog App <a name="about-project"></a>
+# 📖Blog App <a name="about-project"></a>
 
 **The Blog app will be a classic example of a blog website.**
 
@@ -57,16 +57,23 @@ To get a local copy up and running, follow these steps.
 
 Clone this repository to your desired folder:
 
-- cd my-folder
-- git clone https://github.com/batoorsohail/blog-app.git
+```sh
+  cd <desired-folder>
+  git clone https://github.com/batoorsohail/blog-app.git
+```
 
-### Install
-- cd blog-app
-- bundle install
+### Install <a name="install"></a>
+
+```sh
+  cd blog-app
+  bundle install
+```
 
 ### Usage <a name="usage"></a>
 
-run `rails s` 
+```sh
+  rails s
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,6 +125,6 @@ I would like to thank Microverse for providing this opportunity for us.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENCE) licensed.
+This project is [MIT](https://github.com/batoorsohail/blog-app/blob/data-model/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
