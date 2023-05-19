@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   user = User.new(name: 'Ahmad', photo: 'www.image.com', bio: 'Full Stack Developer', posts_counter: 5)
-  
+
   it 'name should be Ahmad' do
     expect(user.name).to eq('Ahmad')
   end
