@@ -75,6 +75,12 @@ Clone this repository to your desired folder:
   rails s
 ```
 
+### Test <a name="test"></a>
+
+```sh
+  rspec spec
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
