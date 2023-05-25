@@ -1,0 +1,93 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.users-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  width: 90%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  width: 60%;
+  height: 10vh;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+}
+
+.posts-counter {
+  margin-right: 10px;
+}
+
+
+/* -----------show user details-------------- */
+
+.user-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.user-bio {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+.posts-container {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+.comments-likes {
+  display: flex;
+  gap: 10px;
+}
+
+.more-post-btn {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+/* -----------show posts-------------- */
+
+.comments-section-container {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+.comments-section {
+  display: flex;
+  gap: 5px;
+}
+
+.pagination-btn {
+  padding: 10px;
+  border: 1px solid #000;
+}
