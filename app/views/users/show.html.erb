@@ -1,0 +1,41 @@
+<main>
+  <section class="users-container">
+      <div class="user-img-container">
+        <img src=<% @user.photo %> class="user-img">
+      </div>
+      <div class="user-info">
+        <h2 class="user-name">
+          <%= link_to @user.name %>
+        </h2>
+        <p class="posts-counter">
+          Number of posts: <%= @user.posts_counter %>
+        </p>
+      </div>
+  </section>
+  <section class="user-details-container">
+    <div class="user-bio">
+      <h3>Bio</h3>
+      <p><%= @user.bio %></p>
+    </div>
+    <% if @user.recent_posts.blank? %>
+      <h3>No post! Please add a post.</h3>
+    <% else %>
+      <% @user.recent_posts.each do |post| %>
+        <article class="posts-container">
+          <h3>
+            Post: #
+            <%= link_to post.id, user_post_path(@user, post) %>
+          </h3>
+          <p><%= post.text %></p>
+          <div class="comments-likes">
+            <p> Comments: <%= post.comments_counter %></p>
+            <p>Likes: <%= post.likes_counter %></p>
+          </div>
+        </article>
+      <% end %>
+    <% end %>
+    <div>
+      <a class="more-post-btn" href="<%= user_posts_path(user_id: @user.id) %>">See all posts</a>
+    </div>
+  </section>
+</main>
