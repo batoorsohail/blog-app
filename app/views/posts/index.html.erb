@@ -1,0 +1,51 @@
+<main>
+  <section class="users-container">
+      <div class="user-img-container">
+        <img src=<% @user.photo %> class="user-img">
+      </div>
+      <div class="user-info">
+        <h2 class="user-name">
+          <%= link_to @user.name %>
+        </h2>
+        <p class="posts-counter">
+          Number of posts: <%= @user.posts_counter %>
+        </p>
+      </div>
+  </section>
+  <section class="user-details-container">
+      <% if @user.recent_posts.blank? %>
+      <h3>No post! Please add a post.</h3>
+      <% else %>
+        <% @user.posts.each do |post| %>
+          <article class="posts-container">
+            <h3>
+              Post: #
+              <%= link_to post.id, user_post_path(@user, post) %>
+            </h3>
+            <p>
+              <%= post.text %>
+            </p>
+            <div class="comments-likes">
+              <p>Comments: <%= post.comments_counter %></p>
+              <p>Likes: <%= post.likes_counter %></p>
+            </div>
+          </article>
+          <article class="comments-section-container">
+            <% if post.recent_comments.blank? %>
+              <h4>No comments! Please add a comments.</h4>
+            <% else %>
+              <% post.recent_comments.each do |comment| %>
+                <div class="comments-section">
+                  <p><%= comment.author.name %>:</p>
+                  <p><%= comment.text %></p>
+                </div>
+              <% end %>
+            <% end %>
+          </article>
+        <% end %>
+      <% end %>
+      <div>
+        <a class='pagination-btn' href='#'>Pagination</a>
+      </div>
+  </section>
+</main>
