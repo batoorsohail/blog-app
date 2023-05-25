@@ -1,0 +1,28 @@
+<main>
+  <section class="user-details-container">
+      <article class="posts-container">
+        <h3>
+          Post: #
+          <%= @post.id %> by <%= @post.author.name %>
+        </h3>
+        <div class="comments-likes">
+          <p>Comments: <%= @post.comments_counter %></p>
+          <p>Likes: <%= @post.likes_counter %></p>
+        </div>
+        <p>
+          <%= @post.text %>
+        </p>
+      </article>
+      <article class="comments-section-container">
+        <% if @post.recent_comments.blank? %>
+          <h4>No comments! Please add a comments.</h4>
+        <% else %>
+          <% @post.comments.each do |comment| %>
+            <div class="comments-section">
+              <p><%= comment.author.name %></p>
+              <p><%= comment.text %></p>
+            </div>
+          <% end %>
+        <% end %>
+  </section>
+</main>
