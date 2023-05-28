@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show]
+  
   def index
     @users = User.all
     @current_user = current_user
@@ -12,6 +14,5 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
-    @showcurrentuser = current_user
   end
 end
