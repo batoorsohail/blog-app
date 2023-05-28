@@ -1,0 +1,12 @@
+<section class="form-post-section">
+  <h2>Create a new Post</h2>
+
+  <%= form_with model: @post, url: user_posts_path, method: :post, local: true, scope: :post do |form| %>
+
+    <div class='post-form'>
+      <%= form.text_field :title, placeholder: 'Enter Post title', class: 'post-title' %>
+      <%= form.text_area :text, placeholder: 'Enter your Post text', class: 'post-area' %>
+      <%= form.submit 'Create Post', class: 'post-btn' %>
+    </div>
+  <% end %>
+</section>

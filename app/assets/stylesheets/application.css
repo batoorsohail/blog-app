@@ -3,6 +3,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  color: #000;
 }
 
 main {
@@ -16,9 +17,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
   margin-top: 50px;
-  width: 90%;
+  width: 100%;
 }
 
 .user-info {
@@ -29,12 +30,13 @@ main {
   border-radius: 10px;
   padding: 0 10px 0 10px;
   width: 60%;
-  height: 10vh;
+  height: 15vh;
 }
 
-.user-img {
-  width: 100px;
-  height: 100px;
+.user-img-container {
+  width: 10%;
+  border: 1px solid;
+  height: 15vh;
 }
 
 .posts-counter {
@@ -47,7 +49,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 90%;
+  width: 75%;
   margin-top: 20px;
 }
 
@@ -75,10 +77,20 @@ main {
 
 /* -----------show posts-------------- */
 
+.create-post-btn {
+  margin-top: 15px;
+  width: 75%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: rgb(226, 224, 224);
+  color: #000;
+  padding: 15px 0 15px 0;
+}
+
 .comments-section-container {
   border: 1px solid #000;
-  border-radius: 10px;
   padding: 5px 10px 5px 10px;
+  margin-top: -18px;
 }
 
 .comments-section {
@@ -89,4 +101,80 @@ main {
 .pagination-btn {
   padding: 10px;
   border: 1px solid #000;
+}
+
+/* -----------form-post-section-------------- */
+
+.form-post-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.post-title {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.post-area {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.post-btn {
+  padding: 10px;
+  background-color: rgb(243, 241, 241);
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+/* -----------Like and comment section-------------- */
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.create-comment-btn {
+  padding: 5px 20px;
+  background-color: #ecefed;
+}
+
+.like-btn {
+  padding: 5px 20px;
+  background-color: #ecefed;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comment-area {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.comment-btn {
+  padding: 10px;
+  background-color: rgb(243, 241, 241);
+  border: 1px solid #fff;
+  border-radius: 5px;
 }

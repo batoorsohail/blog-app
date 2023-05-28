@@ -12,6 +12,17 @@
         <p>
           <%= @post.text %>
         </p>
+        <section class='buttons'>
+          <button class='create-comment-btn'>
+            <%= link_to 'Add Comment', new_user_post_comment_path(@user, @post)%>
+          </button>
+
+          <div>
+            <%= form_with model: Like, url: user_post_likes_path(@post.author, @post) do |form| %>
+              <%= form.submit 'Like Post', class: 'like-btn' %>
+            <% end %>
+          </div>
+      </section>
       </article>
       <article class="comments-section-container">
         <% if @post.recent_comments.blank? %>
@@ -24,5 +35,6 @@
             </div>
           <% end %>
         <% end %>
+      </article>
   </section>
 </main>
