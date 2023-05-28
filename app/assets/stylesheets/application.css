@@ -102,3 +102,79 @@ main {
   padding: 10px;
   border: 1px solid #000;
 }
+
+/* -----------form-post-section-------------- */
+
+.form-post-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.post-title {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px
+}
+
+.post-area {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.post-btn {
+  padding: 10px;
+  background-color: rgb(243, 241, 241);
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+/* -----------Like and comment section-------------- */
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.create-comment-btn {
+  padding: 5px 20px;
+  background-color: #ecefed;
+}
+
+.like-btn {
+  padding: 5px 20px;
+  background-color: #ecefed;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comment-area {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.comment-btn {
+  padding: 10px;
+  background-color: rgb(243, 241, 241);
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
