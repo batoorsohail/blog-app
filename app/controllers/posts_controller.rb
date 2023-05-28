@@ -16,7 +16,7 @@ class PostsController < ApplicationController
       flash[:alert] = 'Something went wrong'
       render :new
     end
-  end  
+  end
 
   def show
     set_post
