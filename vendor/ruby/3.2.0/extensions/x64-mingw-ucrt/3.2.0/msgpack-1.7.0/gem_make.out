@@ -1,0 +1,34 @@
+current directory: E:/Microverse/Module 5/blog_app/vendor/ruby/3.2.0/gems/msgpack-1.7.0/ext/msgpack
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+checking for ruby/st.h... yes
+checking for st.h... no
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+creating Makefile
+
+current directory: E:/Microverse/Module 5/blog_app/vendor/ruby/3.2.0/gems/msgpack-1.7.0/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230517-19460-xidk5p sitelibdir\=./.gem.20230517-19460-xidk5p clean
+
+current directory: E:/Microverse/Module 5/blog_app/vendor/ruby/3.2.0/gems/msgpack-1.7.0/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230517-19460-xidk5p sitelibdir\=./.gem.20230517-19460-xidk5p
+generating msgpack-x64-mingw-ucrt.def
+compiling buffer.c
+compiling buffer_class.c
+compiling extension_value_class.c
+compiling factory_class.c
+compiling packer.c
+compiling packer_class.c
+compiling packer_ext_registry.c
+compiling rbinit.c
+compiling rmem.c
+compiling unpacker.c
+compiling unpacker_class.c
+compiling unpacker_ext_registry.c
+linking shared-object msgpack/msgpack.so
+
+current directory: E:/Microverse/Module 5/blog_app/vendor/ruby/3.2.0/gems/msgpack-1.7.0/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230517-19460-xidk5p sitelibdir\=./.gem.20230517-19460-xidk5p install
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20230517-19460-xidk5p/msgpack
+
+current directory: E:/Microverse/Module 5/blog_app/vendor/ruby/3.2.0/gems/msgpack-1.7.0/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230517-19460-xidk5p sitelibdir\=./.gem.20230517-19460-xidk5p clean
