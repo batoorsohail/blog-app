@@ -1,41 +1,40 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  describe 'GET /posts' do
-    before do
-      get user_posts_path(:user_id)
+  user = User.create(name: 'John', photo: 'www.eample.com', bio: 'Life science', posts_counter: 0)
+  post = Post.create(title: 'something', text: 'hello', author: user, comments_counter: 0, likes_counter: 0)
+
+  describe "GET /users/#{user.id}/posts/#{post.id}" do
+    it 'should return a successful request' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response).to be_successful
     end
 
-    it 'returns correct status' do
-      expect(response).to have_http_status(:success)
+    it 'should render correct template' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response).to render_template('show')
     end
 
-    it 'renders the index template' do
-      expect(response).to render_template(:index)
-    end
-
-    it 'return the correct placeholder' do
-      expect(response.body).to include('List of all posts')
+    it 'should check if response body is correct' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response.body).to include(post.title)
     end
   end
 
-  describe "Get specifc user's post" do
-    user = User.create!(name: 'Ahmad', photo: 'www.image.com', bio: 'OG', posts_counter: 3)
-    post = Post.create!(title: 'Spec Test', author_id: user.id, comments_counter: 5, likes_counter: 10)
-
-    it 'returns correct status' do
-      get user_posts_path(user_id: user.id, id: post.id)
-      expect(response).to have_http_status(:success)
+  describe 'GET /users/:id' do
+    it 'should return a successful response' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response).to be_successful
     end
 
-    it 'renders the index template' do
+    it 'should check if response body is correct' do
       get "/users/#{user.id}/posts/#{post.id}"
-      expect(response).to render_template(:show)
+      expect(response.body).to include(post.title)
     end
 
-    it 'return the correct placeholder' do
+    it 'should return template for response' do
       get "/users/#{user.id}/posts/#{post.id}"
-      expect(response.body).to include('Here are the details of a specific post')
+      expect(response).to render_template('show')
     end
   end
 end
