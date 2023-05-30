@@ -56,7 +56,6 @@ RSpec.describe 'Posts', type: :feature do
       expect(page).to have_content(@post.likes_counter)
     end
 
-
     it 'should render a button pagination' do
       visit user_posts_path(user_id: @user.id)
       expect(page).to have_css('.pagination-btn')
