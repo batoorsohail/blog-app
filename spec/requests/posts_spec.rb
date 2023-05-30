@@ -1,40 +1,45 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :request do
-  user = User.create(name: 'John', photo: 'www.eample.com', bio: 'Life science', posts_counter: 0)
-  post = Post.create(title: 'something', text: 'hello', author: user, comments_counter: 0, likes_counter: 0)
+describe 'Posts', type: :request do
+  describe 'GET all posts for the user' do
+    before(:each) do
+      # Create a user and assign it to @user
+      @user = User.create!(name: 'Mert', photo: 'www.unsplash.com', bio: 'Test', posts_counter: 3)
+    end
 
-  describe "GET /users/#{user.id}/posts/#{post.id}" do
-    it 'should return a successful request' do
-      get "/users/#{user.id}/posts/#{post.id}"
+    it 'checks whether it brings successful response' do
+      get user_posts_path(user_id: @user.id)
       expect(response).to be_successful
     end
 
-    it 'should render correct template' do
-      get "/users/#{user.id}/posts/#{post.id}"
-      expect(response).to render_template('show')
+    it 'renders the index template' do
+      get user_posts_path(user_id: @user.id)
+      expect(response).to render_template(:index)
     end
 
-    it 'should check if response body is correct' do
-      get "/users/#{user.id}/posts/#{post.id}"
-      expect(response.body).to include(post.title)
+    it 'displays the body paragraph for users' do
+      get user_path(@user)
+      expect(response.body).to include('See all posts')
     end
   end
 
-  describe 'GET /users/:id' do
-    it 'should return a successful response' do
-      get "/users/#{user.id}/posts/#{post.id}"
+  describe 'GET specific post for the user' do
+    user = User.create!(name: 'Mert', photo: 'www.unsplash.com', bio: 'Test', posts_counter: 3)
+    post = Post.create!(title: 'Test Post', author_id: user.id, comments_counter: 3, likes_counter: 5)
+
+    it 'checks whether it brings successful response' do
+      get user_posts_path(user_id: user.id, id: post.id)
       expect(response).to be_successful
     end
 
-    it 'should check if response body is correct' do
+    it 'renders the show template' do
       get "/users/#{user.id}/posts/#{post.id}"
-      expect(response.body).to include(post.title)
+      expect(response).to render_template(:show)
     end
 
-    it 'should return template for response' do
+    it 'displays the body paragraph for users' do
       get "/users/#{user.id}/posts/#{post.id}"
-      expect(response).to render_template('show')
+      expect(response.body).to include('Post: #')
     end
   end
 end
