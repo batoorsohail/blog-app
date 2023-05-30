@@ -39,6 +39,10 @@ main {
   height: 15vh;
 }
 
+.user-img {
+  height: 15vh;
+}
+
 .posts-counter {
   margin-right: 10px;
 }
