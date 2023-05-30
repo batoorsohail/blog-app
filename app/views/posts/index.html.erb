@@ -23,7 +23,7 @@
           <article class="posts-container">
             <h3>
               Post: #
-              <%= link_to post.id, user_post_path(@user, post) %>
+              <%= link_to post.title, user_post_path(@user, post) %>
             </h3>
             <p>
               <%= post.text %>
