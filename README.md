@@ -39,7 +39,15 @@
 ### Key Features <a name="key-features"></a>
 
 - **Adding comments**
-- **Adding posts**
+- **Create Ruby on Rails project**
+- **Creating a data model**
+- **Validations and Model specs**
+- **Processing data in models**
+- **Setup and controllers**
+- **Controllers specs**
+- **Views**
+- **Forms**
+- **Integration specs for Views and fixing n+1 problems**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

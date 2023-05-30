@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root "users#index"
+  get '/www.eample.com', to: 'users#index'
+  get '/www.unsplash.com', to: 'users#index'
+  get '/www.image.com', to: 'users#index'
 end
