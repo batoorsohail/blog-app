@@ -248,3 +248,37 @@ button[type="submit"] {
   padding: 10px;
   border-radius: 5px;
 }
+
+/* --log in-- */
+
+.log-in-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.sign-in-h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.log-in-form-container {
+  width: 60%;
+}
+
+label {
+  font-size: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.log-in-btn {
+  padding: 5px 10px;
+  background-color: #fff;
+}
