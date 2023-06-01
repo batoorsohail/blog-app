@@ -48,6 +48,9 @@
 - **Views**
 - **Forms**
 - **Integration specs for Views and fixing n+1 problems**
+- **Adding devise**
+- **Adding sign up form**
+- **Adding log in form**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
