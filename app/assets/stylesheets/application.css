@@ -229,7 +229,7 @@ input[type="password"] {
   background-color: #fff;
   width: 100%;
   margin-bottom: 10px;
-  box-shadow: 3px 3px black
+  box-shadow: 3px 3px black;
 }
 
 .sign-up-btn:hover {
@@ -264,7 +264,7 @@ button[type="submit"] {
 
 input[type="email"],
 input[type="password"] {
-  padding: 10px 0px;
+  padding: 10px 0;
   border-radius: 5px;
 }
 
