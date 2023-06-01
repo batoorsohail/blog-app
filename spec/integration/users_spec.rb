@@ -39,7 +39,6 @@ RSpec.describe 'Users', type: :feature do
   describe 'User show page' do
     before do
       @user1 = User.create(name: 'Donia', photo: 'https://via.placeholder.com/150', bio: 'I love coding!')
-      @user1.save
       @post1 = @user1.posts.create(title: 'First post', text: 'This is my first post.')
       @post2 = @user1.posts.create(title: 'Second post', text: 'This is my second post.')
       @post3 = @user1.posts.create(title: 'Third post', text: 'This is my third post.')
