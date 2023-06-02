@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def index
     @posts = Post.find(params[:post_id])
     @user = User.find(params[:user_id])
-    
+
     if @posts
       @comments = @posts.comments
       respond_to do |format|
@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
         format.json { render json: @comments }
       end
     else
-      flash[:alert] = "Post not found"
+      flash[:alert] = 'Post not found'
       redirect_to user_posts_path(@user)
     end
   end
