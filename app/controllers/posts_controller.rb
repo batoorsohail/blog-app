@@ -2,6 +2,11 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
   end
 
   def new
@@ -9,6 +14,11 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = current_user.posts.new(post_params)
+    @post.comments_counter = 0
+    @post.likes_counter = 0
+    @post.author = current_user
+
     @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to "/users/#{current_user.id}/posts", notice: 'Post created successfully'
@@ -20,6 +30,11 @@ class PostsController < ApplicationController
 
   def show
     set_post
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @post }
+    end
   end
 
   private
